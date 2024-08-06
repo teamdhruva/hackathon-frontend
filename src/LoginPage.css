@@ -1,0 +1,236 @@
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes scaleUp {
+    from {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .login-background {
+    padding-top: 65px;
+    height: 100vh;
+    background-image: url('./static/background.png');
+    overflow-x: hidden;
+  }
+  
+  .login-container {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 80%;
+    max-width: 900px;
+    max-height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .login-illustration {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: scaleUp 1s ease-in-out;
+  }
+  
+  .login-illustration img {
+    max-width: 100%;
+    height: auto;
+    animation: float 3s infinite ease-in-out;
+  }
+  
+  .login-form {
+    background-image: url('./static/loginbg.png');
+    background-size: cover;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    background-color: #ffffff;
+    animation: fadeIn 1.5s ease-in-out;
+    border-radius: 10px;
+    padding-top: 0px;
+  }
+  
+  .login-form h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .login-form p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #6c757d;
+    animation: fadeIn 2.5s ease-in-out;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    animation: fadeIn 3s ease-in-out;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    animation: fadeIn 3.5s ease-in-out;
+  }
+  
+  .form-group input[type="email"],
+  .form-group input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 14px;
+    animation: fadeIn 4s ease-in-out;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    animation: fadeIn 4.5s ease-in-out;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #6366F1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    animation: fadeIn 5s ease-in-out;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #4F46E5;
+  }
+  
+  a {
+    display: block;
+    margin-top: 10px;
+    color: #6366F1;
+    text-decoration: none;
+    animation: fadeIn 5.5s ease-in-out;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .signup-link {
+    margin-top: 20px;
+    animation: fadeIn 6s ease-in-out;
+  }
+
+  .loginCaption1{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .login-container {
+      flex-direction: column;
+      width: 90%;
+      max-height: none;
+    }
+  
+    /* .login-illustration {
+      display: none;
+    } */
+  
+    .login-form {
+      padding: 20px;
+      width: 100%;
+    }
+  
+    .login-form h2 {
+      font-size: 20px;
+    }
+  
+    .login-form p {
+      font-size: 12px;
+    }
+  
+    .form-group input[type="email"],
+    .form-group input[type="password"] {
+      padding: 8px;
+      font-size: 12px;
+    }
+  
+    button[type="submit"] {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .login-container {
+      width: 80%;
+      padding: 20px;
+      padding-left: 0px;
+    }
+  
+    .login-form {
+      padding: 10px;
+      padding-bottom: 40px;
+    }
+  
+    .login-form h2 {
+      font-size: 30px;
+    }
+  
+    .form-group input[type="email"],
+    .form-group input[type="password"] {
+      padding: 8px;
+      font-size: 12px;
+      width: 95%;
+    }
+  
+    button[type="submit"] {
+      padding: 9px;
+      font-size: 14px;
+    }
+  
+    /* .mobile-logo {
+      display: block;
+      margin: 0 auto 20px;
+      max-width: 100px;
+      animation: float 3s infinite ease-in-out;
+    } */
+  }
+  
