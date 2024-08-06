@@ -33,10 +33,11 @@
   }
   
   .login-background {
-    padding-top: 65px;
+    padding-top: 120px;
     height: 100vh;
     background-image: url('./static/background.png');
     overflow-x: hidden;
+    padding-bottom: 0;
   }
   
   .login-container {
@@ -164,6 +165,10 @@
   
   /* Responsive Styles */
   @media (max-width: 768px) {
+
+    .login-background{
+        padding-top: 15%;
+    }
     .login-container {
       flex-direction: column;
       width: 90%;
