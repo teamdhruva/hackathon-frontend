@@ -84,7 +84,7 @@
   .login-form h2 {
     margin-bottom: 10px;
     font-size: 24px;
-    animation: fadeIn 2s ease-in-out;
+    animation: fadeInUp 1s ease-in-out 0.2s;
   }
   
   .login-form p {
@@ -96,7 +96,7 @@
   
   .form-group {
     margin-bottom: 15px;
-    animation: fadeIn 3s ease-in-out;
+    animation: fadeInUp 1s ease-in-out 0.4s;
   }
   
   .form-group label {
@@ -105,7 +105,7 @@
     font-size: 20px;
     color: white;
     font-family: 'Montserrat', sans-serif;
-    animation: fadeIn 3.5s ease-in-out;
+    animation: fadeInUp 1s ease-in-out 0.6s;
   }
   
   .form-group input[type="email"],
@@ -115,30 +115,30 @@
     border: 1px solid #ced4da;
     border-radius: 5px;
     font-size: 14px;
-    animation: fadeIn 3.75s ease-in-out;
+    animation: fadeInUp 1s ease-in-out 0.8s;
   }
   
   .checkbox-group {
     display: flex;
     align-items: center;
-    animation: fadeIn 4.0s ease-in-out;
+    animation: fadeInUp 1s ease-in-out 1s; 
   }
   
   button[type="submit"] {
     width: 100%;
     padding: 10px;
-    background-color: #6366F1;
+    background-color: #32CD32;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
-    animation: fadeIn 4.25s ease-in-out;
+    animation: fadeInUp 1s ease-in-out 1.2s;
   }
   
   button[type="submit"]:hover {
-    background-color: #4F46E5;
+    background-color: #228B22;
   }
   
   a {
@@ -155,7 +155,7 @@
   
   .signup-link {
     margin-top: 20px;
-    animation: fadeIn 5s ease-in-out;
+    animation: fadeInUp 1s ease-in-out 1.6s;
   }
 
   .loginCaption1{
@@ -239,3 +239,24 @@
     } */
   }
   
+  .samsung-loading-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px; /* Adjust to match the size of the button */
+}
+
+.samsung-loading-animation .circle {
+    width: 35px;
+    height: 35px;
+    border: 6px solid transparent;
+    border-top-color: #32CD32;
+    border-radius: 50%;
+    animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
