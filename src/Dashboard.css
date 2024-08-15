@@ -116,7 +116,7 @@
     justify-content: space-around;
     width: 100%;
     padding: 20px;
-    flex-wrap: wrap; /* Allow wrapping on small screens */
+    flex-wrap: nowrap; /* Allow wrapping on small screens */
 }
 
 .member {
