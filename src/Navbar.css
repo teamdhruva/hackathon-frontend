@@ -1,0 +1,29 @@
+.navbar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.navbar-list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-item a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navbar-item.active a {
+    border-bottom: 2px solid #32CD32;
+}
+
+.navbar-item a:hover {
+    color: #32CD32;
+}

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './LoginPage.css'; // Ensure to include the CSS for the Samsung animation
 import logo from './static/logo.png';
+import Navbar from './Navbar'
 
 const LoginIllustration = () => (
     <div className="login-illustration">
@@ -88,6 +89,7 @@ const LoginPage = () => {
 
     return (
         <div className="login-background">
+            <Navbar/>
             <div className="login-container">
                 {step > 0 && <LoginIllustration />}
                 {step > 1 && <LoginForm />}
