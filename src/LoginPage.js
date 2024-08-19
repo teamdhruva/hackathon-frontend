@@ -36,7 +36,6 @@ const LoginForm = () => {
             });
             if (response.ok) {
                 const data = await response.json();
-                console.log("Login successfully");
                 navigate('/dashboard', { state: { teamData: data.team } });
             } else {
                 alert("Login failed!! Try again");

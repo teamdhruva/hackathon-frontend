@@ -10,11 +10,11 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/testing1234" element={<LoginPage />} />
+        <Route path="/" element={<LoginPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/instructions" element={<InstructionPage />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/" element={<NotYet />} />
+        <Route path="/testing1234" element={<NotYet />} />
       </Routes>
     </Router>
   );

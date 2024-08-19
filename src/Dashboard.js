@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation,useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Dashboard.css';
 import image from './static/Welcome2.png';
@@ -10,9 +10,9 @@ const Dashboard = () => {
     const { teamData } = location.state || {}; // Get team data from state
     const [showWelcome, setShowWelcome] = useState(true);
     const [imageUrls, setImageUrls] = useState({ image1: '', image2: '' });
-    
+
     useEffect(() => {
-        if(!teamData){
+        if (!teamData) {
             navigate('/')
         }
         const fetchImages = async () => {
@@ -32,11 +32,11 @@ const Dashboard = () => {
     const handleWelcomeClick = () => {
         setShowWelcome(false);
     };
-    
+
     const handleUpload = () => {
-        window.location.href = 'https://example.com/upload'; // Replace with your actual upload link
+        window.location.href = 'https://drive.google.com/drive/folders/1mtKCTTj-uoV1LAf-kIzUZKqDZ5dSJqdw'; // Replace with your actual upload link
     };
-    
+
     const handleDownload = () => {
         const backendURL = 'https://dhruva-hackathon-rohithgowdam.up.railway.app/api/download'; // Adjust based on your backend server URL
         const url = `${backendURL}/${teamData.problemStatement}`;
@@ -98,6 +98,7 @@ const Dashboard = () => {
                             <span className="letter" style={{ animationDelay: `${2.3 + teamData?.teamName.length * 0.1}s` }}>o</span>
                             <span className="letter" style={{ animationDelay: `${2.4 + teamData?.teamName.length * 0.1}s` }}>n</span>
                         </h1>
+                        <div className='loading-text'><b>It's not about what you know, it's all about what jugaad you know.</b></div>
                     </div>
                 </div>
             ) : (
@@ -105,18 +106,28 @@ const Dashboard = () => {
                     <div className="team-name-container">
                         <h2 className="team-name">{teamData?.teamName}</h2>
                     </div>
+                    <div className="problem-name-container">
+                        <h2 className="problem-name">Problem Category:{teamData?.problemStatement}{(teamData.teamID === "2" || teamData.teamID === "5") ? " PLUS" : ""}</h2>
+                        <br></br>
+                        {(teamData.teamID === "2" || teamData.teamID === "5") && (
+                            <div id="specialText">
+                                Last problem is compulsory
+                            </div>
+                        )}
+
+                    </div>
                     <div className="team-members">
                         <div className="member-card">
                             <img src={imageUrls.image1} alt={`${teamData?.person1} profile`} className="member-image" />
                             <h3 className="member-name">{teamData?.person1}</h3>
                             <p className="member-description">{teamData?.caption1}</p>
-                            <button className="know-more-button">Know More</button>
+                            <button className="know-more-button" onClick={click => { alert("Enough knowing yourslf, go download and solve the questions") }}>Know More</button>
                         </div>
                         <div className="member-card">
                             <img src={imageUrls.image2} alt={`${teamData?.person2} profile`} className="member-image" />
                             <h3 className="member-name">{teamData?.person2}</h3>
                             <p className="member-description">{teamData?.caption2}</p>
-                            <button className="know-more-button">Know More</button>
+                            <button className="know-more-button" onClick={click => { alert("Enough knowing yourslf, go download and solve the questions") }}>Know More</button>
 
                         </div>
                     </div>

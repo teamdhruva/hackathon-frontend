@@ -35,7 +35,7 @@
   .login-background {
     padding-top: 110px;
     height: 100vh;
-    background-image: url('./static/background.png');
+    background-image: url('./static/background.webp');
     overflow-x: hidden;
     padding-bottom: 0;
   }
